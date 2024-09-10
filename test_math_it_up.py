@@ -1,5 +1,5 @@
 import pytest
-import math_it_up
+from math_it_up import is_even, is_odd, mean, median, mode
 
 """
 This file contains the tests for the math_it_up module, which contains the
@@ -26,28 +26,33 @@ the mode of the numbers.
 To run the tests, run `pytest` from the command line in the same directory as
 this file.
 """
-
 def test_is_even():
   """
   Tests for the `is_even` function
   """
+  assert is_even(4) == True
 
 def test_is_odd():
   """
   Tests for the `is_odd` function
   """
+  assert is_odd(3) == True 
+
 
 def test_mean():
   """
   Tests for the `mean` function
   """
+  assert mean([2,3,5,7,9,8,3]) == 5.285714285714286
 
 def test_median():
   """
   Tests for the `median` function
   """
+  assert median([2,3,5,7,9,8,3]) == 5
 
 def test_mode():
   """
   Tests for the `mode` function
   """
+  assert mode([2,3,5,7,9,8,3]) == [3]
